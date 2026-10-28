@@ -53,11 +53,11 @@
 	</repositories>
 
 	<properties>
-		<revision>0.6.0</revision>
+		<revision>0.6.1</revision>
 		<main.basedir>${project.basedir}</main.basedir>
 		<commons-lang3-version>3.7</commons-lang3-version>
 		<dubbo-version>3.2.5</dubbo-version>
-		<fastjson-version>1.2.83</fastjson-version>
+		<fastjson2-version>2.0.66</fastjson2-version>
 		<springfox-swagger-version>2.9.2</springfox-swagger-version>
 		<jacoco-version>0.8.2</jacoco-version>
 		<apollo-version>1.2.0</apollo-version>
@@ -110,9 +110,9 @@
 			</dependency>
 
 			<dependency>
-				<groupId>com.alibaba</groupId>
-				<artifactId>fastjson</artifactId>
-				<version>${fastjson-version}</version>
+				<groupId>com.alibaba.fastjson2</groupId>
+				<artifactId>fastjson2</artifactId>
+				<version>${fastjson2-version}</version>
 			</dependency>
 
 			<dependency>

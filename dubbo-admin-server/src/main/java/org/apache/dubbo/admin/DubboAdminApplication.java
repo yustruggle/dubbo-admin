@@ -31,6 +31,10 @@ import org.springframework.boot.autoconfigure.orm.jpa.HibernateJpaAutoConfigurat
 public class DubboAdminApplication {
 
 	public static void main(String[] args) {
+		// 安全加固兜底：本项目 fastjson1 已整体升级为 fastjson2（见根 pom fastjson2-version），
+		// 此处预设 fastjson1 的 safeMode 开关，防止未来依赖变动把 fastjson1(<=1.2.83) 经由传递依赖混入
+		// 后再次暴露 autoType 反序列化漏洞；fastjson2 不读取该属性，设置它没有任何副作用。
+		System.setProperty("fastjson.parser.safeMode", "true");
 		SpringApplication.run(DubboAdminApplication.class, args);
 	}
 }
